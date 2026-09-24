@@ -1,2 +1,0 @@
-CompileFlags:
-  Add: [-I/home/taha/Projects/mine/ember/vendor,-I/home/taha/Projects/mine/ember/vendor/glad/include, -I/home/taha/Projects/mine/ember/src,-std=c99,-Wall,-x,c]

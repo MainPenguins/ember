@@ -1,0 +1,8 @@
+find_package(OpenGL REQUIRED)
+find_package(SDL3 REQUIRED CONFIG)
+find_package(SDL3_mixer REQUIRED CONFIG)
+set(VND_SRCs ${CMAKE_CURRENT_SOURCE_DIR}/glad/src/glad.c ${CMAKE_CURRENT_SOURCE_DIR}/stb/stb_image.c ${CMAKE_CURRENT_SOURCE_DIR}/pmu.c)
+set(VND_INCs ${CMAKE_CURRENT_SOURCE_DIR}/glad/include ${CMAKE_CURRENT_SOURCE_DIR}/stb ${CMAKE_CURRENT_SOURCE_DIR}/pmu/include ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(ember PRIVATE ${VND_INCs})
+target_sources(ember PRIVATE ${VND_SRCs})
+target_link_libraries(ember PRIVATE SDL3::SDL3 SDL3_mixer::SDL3_mixer OpenGL::GL m)
